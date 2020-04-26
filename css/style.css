@@ -4,14 +4,14 @@ body, html {
   font-size: 16px;
 }
 
-.firstScreen .logo {
+.mainScreen .logo {
   margin-top: 2rem;
   margin-left: 2rem;
   width: 300px;
   height: 60px;
 }
 
-.firstScreen .list {
+.mainScreen .list {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,14 +21,14 @@ body, html {
           justify-content: space-between;
 }
 
-.firstScreen .list .listItem {
+.mainScreen .list .listItem {
   font-family: Philosopher, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   list-style: none;
 }
 
-.firstScreen .list .listItem:hover {
+.mainScreen .list .listItem:hover {
   -webkit-animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
           animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
@@ -55,11 +55,11 @@ body, html {
   }
 }
 
-.firstScreen .list .listItem > a {
+.mainScreen .list .listItem > a {
   color: DarkSeaGreen;
 }
 
-.firstScreen .list .listItem > a:hover {
+.mainScreen .list .listItem > a:hover {
   text-decoration: none;
   color: MediumSeaGreen;
 }
