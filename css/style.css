@@ -130,6 +130,16 @@ body, html {
           box-shadow: 0 0 10px 15px #00CC33;
   padding: 15px;
   background-color: #333;
+  margin-bottom: 5%;
+}
+
+.aboutScreen .aboutText a {
+  margin-left: 30%;
+  background: #00CC33;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 .skillsScreen {
