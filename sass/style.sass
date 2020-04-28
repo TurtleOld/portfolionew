@@ -1,7 +1,10 @@
 // Vars
 
-$fontPhilosopher: Philosopher, sans-serif;
-$fontOpenSans: 'Open Sans', sans-serif;
+$fontPhilosopher: Philosopher, sans-serif
+$fontOpenSans: 'Open Sans', sans-serif
+$DarkGreen: #006400
+$MediumGreen: #00CC33
+$mtTitle: 5rem
 
   
 body, html
@@ -10,6 +13,7 @@ body, html
   font-size: 16px
   
 .mainScreen
+  height: 100vh
   .logo
     margin-top: 2rem
     margin-left: 2rem
@@ -32,16 +36,60 @@ body, html
           100%
             transform: translateZ(160px) rotateY(360deg)
       > a 
-        color: DarkSeaGreen
+        color: $DarkGreen
         &:hover
           text-decoration: none
-          color: MediumSeaGreen;
+          color: $MediumGreen
         
 .myNameTitle
   margin-top: 50%
   text-align: center
   font-family: $fontOpenSans
   h1
-    color: #3e4c31;
+    color: $DarkGreen
   p 
-    
+    color: $MediumGreen
+
+.aboutScreen
+  height: 100vh
+  .aboutTitle
+    margin-top: $mtTitle
+    display: flex
+    justify-content: center
+    font-family: $fontPhilosopher
+  .aboutText
+    margin-top: 25%
+    margin-bottom: 50%
+    p 
+      margin: 0 auto
+      width: 500px
+      height: auto
+      border-radius: 5px
+      color: $MediumGreen
+      box-shadow: 0 0 10px 15px $MediumGreen
+      padding: 15px
+      background-color: #333
+
+.skillsScreen
+  height: 100vh
+  .skillsTitle
+    margin-top: $mtTitle
+    display: flex
+    justify-content: center
+    font-family: $fontPhilosopher
+  .listSkills
+    margin-top: 5rem
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    flex-wrap: wrap
+    &_item
+      max-width: 370px
+      list-style: none
+      text-align: center
+      color: #ffffff
+      background-color: #333
+      h5 
+        padding-top: 0.5rem
+        padding-bottom: 0.5rem
+        border-bottom: 1px solid #ffffff

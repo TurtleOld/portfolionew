@@ -4,6 +4,10 @@ body, html {
   font-size: 16px;
 }
 
+.mainScreen {
+  height: 100vh;
+}
+
 .mainScreen .logo {
   margin-top: 2rem;
   margin-left: 2rem;
@@ -56,12 +60,12 @@ body, html {
 }
 
 .mainScreen .list .listItem > a {
-  color: DarkSeaGreen;
+  color: #006400;
 }
 
 .mainScreen .list .listItem > a:hover {
   text-decoration: none;
-  color: MediumSeaGreen;
+  color: #00CC33;
 }
 
 .myNameTitle {
@@ -71,6 +75,86 @@ body, html {
 }
 
 .myNameTitle h1 {
-  color: #3e4c31;
+  color: #006400;
+}
+
+.myNameTitle p {
+  color: #00CC33;
+}
+
+.aboutScreen {
+  height: 100vh;
+}
+
+.aboutScreen .aboutTitle {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Philosopher, sans-serif;
+}
+
+.aboutScreen .aboutText {
+  margin-top: 25%;
+  margin-bottom: 50%;
+}
+
+.aboutScreen .aboutText p {
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+  color: #00CC33;
+  -webkit-box-shadow: 0 0 10px 15px #00CC33;
+          box-shadow: 0 0 10px 15px #00CC33;
+  padding: 15px;
+  background-color: #333;
+}
+
+.skillsScreen {
+  height: 100vh;
+}
+
+.skillsScreen .skillsTitle {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Philosopher, sans-serif;
+}
+
+.skillsScreen .listSkills {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillsScreen .listSkills_item {
+  max-width: 370px;
+  list-style: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333;
+}
+
+.skillsScreen .listSkills_item h5 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
