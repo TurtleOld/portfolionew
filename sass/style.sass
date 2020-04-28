@@ -23,6 +23,7 @@ body, html
     margin-top: 3rem
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     .listItem
       font-family: $fontPhilosopher
       font-size: 1.5rem
@@ -78,18 +79,29 @@ body, html
     justify-content: center
     font-family: $fontPhilosopher
   .listSkills
-    margin-top: 5rem
+    margin-top: 3rem
     display: flex
     flex-direction: row
-    justify-content: space-around
     flex-wrap: wrap
+    justify-content: space-around
+    gap: 0.5rem
     &_item
       max-width: 370px
+      flex: 1 1 calc((100% / 3) - 2rem)
+      padding: 0.5rem
       list-style: none
       text-align: center
       color: #ffffff
       background-color: #333
+      &:hover
+        box-shadow: 0 0 5px 8px $MediumGreen
+        color: $MediumGreen
       h5 
         padding-top: 0.5rem
         padding-bottom: 0.5rem
+        text-transform: uppercase
+        font-family: $fontPhilosopher
         border-bottom: 1px solid #ffffff
+      p 
+        font-family: $fontOpenSans
+      
