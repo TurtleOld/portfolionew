@@ -1,4 +1,4 @@
-.aboutScreen .aboutTitle, .skillsScreen .skillsTitle, .worksScreen .worksTitle {
+.aboutScreen .aboutTitle, .skillsScreen .skillsTitle, .worksScreen .worksTitle, .contactsScreen .contactsTitle {
   margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,5 +207,9 @@ body, html {
   padding-top: 0.5rem;
   color: #228B22;
   text-decoration: none;
+}
+
+.contactsScreen {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
