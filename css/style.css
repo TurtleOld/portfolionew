@@ -212,4 +212,54 @@ body, html {
 .contactsScreen {
   height: 100vh;
 }
+
+.contactsScreen .contactsTitle {
+  margin-bottom: 5rem;
+}
+
+.contactsScreen .form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.contactsScreen .form h5 {
+  text-align: center;
+}
+
+.contactsScreen .form label {
+  margin-top: 0.5rem;
+}
+
+.contactsScreen .form textarea {
+  resize: none;
+}
+
+.contactsScreen .form .btn {
+  margin-top: 0.5rem;
+}
+
+.policy .title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-family: Philosopher, sans-serif;
+}
+
+.policy .title h1 {
+  text-align: center;
+}
+
+.policy h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: Philosopher, sans-serif;
+}
+
+.policy p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.policy .datePublic {
+  color: grey;
+}
 /*# sourceMappingURL=style.css.map */
