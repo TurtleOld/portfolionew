@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <title>Frontend Developer Portfolio</title>
   </head>
   <body>
-    <div class="container mainScreen">
+    <div class="container mainScreen header">
       <div class="row">
         <div class="col-5 offset-1">
           <img class="logo" src="img/main_logo.png" alt="">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <!-- .container mainScreen -->
+    <!-- .container mainScreen header -->
     <div class="container aboutScreen">
       <div class="row">
         <div class="col-12">
@@ -165,6 +165,46 @@
         <!-- /.col-lg-12 -->
       </div>
       <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <form action="post.php" method="POST" class="form" id="form" >
+            <h5>Форма обратной связи</h5>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="name">Фамилия Имя Отчество:</label>
+                  <input class="form-control form-control-lg"  type="text" name="name" id="name" placeholder="Иванов Иван Иванович" required>
+                </div>
+                <!-- .col-lg-12 -->
+              </div>
+              <!-- .row -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="email">Адрес электронной почты:</label>
+                  <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="mail@example.ru" required>
+                </div>
+                <!-- /.col-lg-12 -->
+              </div>
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="text">Текст сообщения:</label>
+                  <textarea class="form-control" name="text" id="text" resize="none" cols="3" rows="5" placeholder="Введите текст сообщения" required></textarea> <!-- /#text --></div>
+                <!-- /.col-lg-12 -->
+              </div>
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <input type="submit" id="submit" class="btn btn-primary" value="Отправить сообщение"></div>
+              </div>
+            </div>
+            <!-- .form-group -->
+          </form>
+          <!-- /.form -->
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /.row -->
     </div>
     <!-- /.container contactsScreen -->
 
@@ -173,8 +213,27 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $("#form").submit(function (e) { // Устанавливаем событие отправки для формы с id=form
+           e.preventDefault();
+            var form_data = $(this).serialize(); // Собираем все данные из формы
+            $.ajax({
+                type: "POST", // Метод отправки
+                url: "post.php", // Путь до php файла отправителя
+                contentType: false,
+                data: form_data,
+                success: function(msg){
+                      if(msg == 'ok'){
+                        $('#sumbit').next().text('Отправлено!');
+                      }else{
+                        $('#submit').next().text('Ошибка!');
+                      }
+                    }
+            });
+        });
+  </script>
   </body>
 </html>
