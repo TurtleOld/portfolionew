@@ -31,6 +31,13 @@ body, html {
   font-size: 16px;
 }
 
+.wrapper {
+  background: url("../img/background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .mainScreen {
   height: 100vh;
 }
@@ -89,12 +96,12 @@ body, html {
 }
 
 .mainScreen .list .listItem > a {
-  color: #006600;
+  color: #00FF00;
 }
 
 .mainScreen .list .listItem > a:hover {
   text-decoration: none;
-  color: #00CC33;
+  color: #FFFF00;
 }
 
 .myNameTitle {
@@ -104,11 +111,11 @@ body, html {
 }
 
 .myNameTitle h1 {
-  color: #006600;
+  color: #00FF00;
 }
 
 .myNameTitle p {
-  color: #00CC33;
+  color: #FFFF00;
 }
 
 .aboutScreen {
@@ -125,9 +132,9 @@ body, html {
   width: 500px;
   height: auto;
   border-radius: 5px;
-  color: #00CC33;
-  -webkit-box-shadow: 0 0 10px 15px #00CC33;
-          box-shadow: 0 0 10px 15px #00CC33;
+  color: #FF4500;
+  -webkit-box-shadow: 0 0 10px 15px #00FF00;
+          box-shadow: 0 0 10px 15px #00FF00;
   padding: 15px;
   background-color: #333;
   margin-bottom: 5%;
@@ -135,7 +142,7 @@ body, html {
 
 .aboutScreen .aboutText a {
   margin-left: 30%;
-  background: #00CC33;
+  background: #00FF00;
   padding: 10px;
   color: #ffffff;
   border-radius: 20px;
@@ -151,7 +158,7 @@ body, html {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc((100% / 3) - 2rem);
           flex: 1 1 calc((100% / 3) - 2rem);
-  padding: 0.5rem;
+  margin: 0.1rem;
   list-style: none;
   text-align: center;
   color: #ffffff;
@@ -159,9 +166,9 @@ body, html {
 }
 
 .skillsScreen .listSkills_item:hover {
-  -webkit-box-shadow: 0 0 5px 8px #00CC33;
-          box-shadow: 0 0 5px 8px #00CC33;
-  color: #00CC33;
+  -webkit-box-shadow: 0 0 5px 8px #ADFF2F;
+          box-shadow: 0 0 5px 8px #ADFF2F;
+  color: #ADFF2F;
 }
 
 .skillsScreen .listSkills_item h5 {
@@ -173,6 +180,7 @@ body, html {
 }
 
 .skillsScreen .listSkills_item p {
+  padding: 0.2rem;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -221,13 +229,13 @@ body, html {
   margin: 0 auto;
   max-width: 500px;
   padding: 1rem;
-  border: 1px solid #006600;
+  border: 1px solid #FFFF00;
   border-radius: 50px;
 }
 
 .contactsScreen .form:hover {
-  -webkit-box-shadow: 0 0 5px 8px #00CC33;
-          box-shadow: 0 0 5px 8px #00CC33;
+  -webkit-box-shadow: 0 0 5px 8px #FFFF00;
+          box-shadow: 0 0 5px 8px #FFFF00;
 }
 
 .contactsScreen .form h5 {
