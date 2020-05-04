@@ -223,6 +223,9 @@ body, html {
   padding: 1rem;
   border: 1px solid #006600;
   border-radius: 50px;
+}
+
+.contactsScreen .form:hover {
   -webkit-box-shadow: 0 0 5px 8px #00CC33;
           box-shadow: 0 0 5px 8px #00CC33;
 }
