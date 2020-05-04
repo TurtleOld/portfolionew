@@ -148,7 +148,7 @@ body, html {
 .aboutScreen .aboutText a {
   margin-left: 30%;
   background: #FF7F50;
-  padding: 10px;
+  padding: 0.5rem 0.7rem 0.7rem 0.7rem;
   color: #ffffff;
   border-radius: 20px;
   text-decoration: none;
@@ -279,6 +279,7 @@ body, html {
 .contactsScreen .form .btn {
   position: relative;
   left: 75%;
+  padding: 0.2rem 0.5rem 0.5rem 0.5rem;
 }
 
 .contactsScreen .form input[type="checkbox"] {
@@ -313,4 +314,16 @@ body, html {
 
 .policy .datePublic {
   color: grey;
+}
+
+.link {
+  margin-top: 3rem;
+}
+
+.link a {
+  padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: #FF4500;
 }
