@@ -4,3 +4,5 @@ gulpfile.js
 package-lock.json
 package.json
 sass/style.sass
+.idea/
+.vscode/

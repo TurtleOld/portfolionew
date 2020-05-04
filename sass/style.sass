@@ -24,6 +24,9 @@ $mtTitle: 5rem
   justify-content: space-around
   gap: 0.5rem
 
+%wrapper-background
+  background-size: cover
+
 // Main Content
   
 body, html
@@ -31,14 +34,13 @@ body, html
   padding: 0
   font-size: 16px
 
-.wrapper
-  background: url('../img/background.png')
-  background-position: center center
-  background-repeat: no-repeat
+.wrapper-first
+  background: url('../img/background.png') no-repeat center center
   background-size: cover
+  
+
 .mainScreen
   height: 100vh
-  
   .logo
     margin-top: 2rem
     margin-left: 2rem
@@ -68,16 +70,21 @@ body, html
           color: $secondaryColor
         
 .myNameTitle
-  margin-top: 50%
   text-align: center
   font-family: $fontOpenSans
   h1
-    color: $mainColor
+    color: #ffffff
   p 
     color: $secondaryColor
 
+
+.wrapper-second
+  background: url(../img/html-back.png) no-repeat center center
+  @extend %wrapper-background
+
 .aboutScreen
   height: 100vh
+  
   .aboutTitle
     @extend %titleScreen
   .aboutText
@@ -89,22 +96,28 @@ body, html
       height: auto
       border-radius: 5px
       color: $textColor
-      box-shadow: 0 0 10px 15px $mainColor
+      box-shadow: 0 0 10px 15px #FF7F50
       padding: 15px
       background-color: #333
       margin-bottom: 5%
     a 
       margin-left: 30%
-      background: $mainColor
+      background: #FF7F50
       padding: 10px
       color: #ffffff
       border-radius: 20px
       text-decoration: none
 
+
+.wrapper-third
+  background: url("../img/back-third.jpg") no-repeat center center
+  @extend %wrapper-background
+
 .skillsScreen
   height: 100vh
   .skillsTitle
     @extend %titleScreen
+    color: #ffffff
   .listSkills
     @extend %listStyle
     &_item
@@ -129,10 +142,14 @@ body, html
         padding: 0.2rem
         font-family: $fontOpenSans
       
+.wrapper-fourth
+  background-color: #333
+
 .worksScreen
   height: 100vh
   .worksTitle
     @extend %titleScreen
+    color: #ffffff
   .listWorks
     @extend %listStyle
     &_item
@@ -151,6 +168,11 @@ body, html
         color: #228B22
         text-decoration: none
         
+
+.wrapper-contacts
+  background: url("../img/back-contacts.jpg") no-repeat center center
+  @extend %wrapper-background
+
 .contactsScreen
   height: 100vh
   .contactsTitle
@@ -160,6 +182,7 @@ body, html
     margin: 0 auto
     max-width: 500px
     padding: 1rem
+    background-color: #ffffff
     border: 1px solid $secondaryColor
     border-radius: 50px
     &:hover
@@ -171,7 +194,14 @@ body, html
     textarea 
       resize: none
     .btn
-      margin-top: 0.5rem 
+      position: relative
+      left: 75%
+      
+    input[type="checkbox"]
+     position: absolute
+     top: 0.9rem
+    .checkLabel
+      padding-left: 1rem
 
     
 

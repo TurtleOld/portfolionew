@@ -25,16 +25,18 @@
   gap: 0.5rem;
 }
 
+.wrapper-second, .wrapper-third, .wrapper-contacts {
+  background-size: cover;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   font-size: 16px;
 }
 
-.wrapper {
-  background: url("../img/background.png");
-  background-position: center center;
-  background-repeat: no-repeat;
+.wrapper-first {
+  background: url("../img/background.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -105,17 +107,20 @@ body, html {
 }
 
 .myNameTitle {
-  margin-top: 50%;
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
 
 .myNameTitle h1 {
-  color: #00FF00;
+  color: #ffffff;
 }
 
 .myNameTitle p {
   color: #FFFF00;
+}
+
+.wrapper-second {
+  background: url(../img/html-back.png) no-repeat center center;
 }
 
 .aboutScreen {
@@ -133,8 +138,8 @@ body, html {
   height: auto;
   border-radius: 5px;
   color: #FF4500;
-  -webkit-box-shadow: 0 0 10px 15px #00FF00;
-          box-shadow: 0 0 10px 15px #00FF00;
+  -webkit-box-shadow: 0 0 10px 15px #FF7F50;
+          box-shadow: 0 0 10px 15px #FF7F50;
   padding: 15px;
   background-color: #333;
   margin-bottom: 5%;
@@ -142,15 +147,23 @@ body, html {
 
 .aboutScreen .aboutText a {
   margin-left: 30%;
-  background: #00FF00;
+  background: #FF7F50;
   padding: 10px;
   color: #ffffff;
   border-radius: 20px;
   text-decoration: none;
 }
 
+.wrapper-third {
+  background: url("../img/back-third.jpg") no-repeat center center;
+}
+
 .skillsScreen {
   height: 100vh;
+}
+
+.skillsScreen .skillsTitle {
+  color: #ffffff;
 }
 
 .skillsScreen .listSkills_item {
@@ -184,8 +197,16 @@ body, html {
   font-family: "Open Sans", sans-serif;
 }
 
+.wrapper-fourth {
+  background-color: #333;
+}
+
 .worksScreen {
   height: 100vh;
+}
+
+.worksScreen .worksTitle {
+  color: #ffffff;
 }
 
 .worksScreen .listWorks_item {
@@ -217,6 +238,10 @@ body, html {
   text-decoration: none;
 }
 
+.wrapper-contacts {
+  background: url("../img/back-contacts.jpg") no-repeat center center;
+}
+
 .contactsScreen {
   height: 100vh;
 }
@@ -229,6 +254,7 @@ body, html {
   margin: 0 auto;
   max-width: 500px;
   padding: 1rem;
+  background-color: #ffffff;
   border: 1px solid #FFFF00;
   border-radius: 50px;
 }
@@ -251,7 +277,17 @@ body, html {
 }
 
 .contactsScreen .form .btn {
-  margin-top: 0.5rem;
+  position: relative;
+  left: 75%;
+}
+
+.contactsScreen .form input[type="checkbox"] {
+  position: absolute;
+  top: 0.9rem;
+}
+
+.contactsScreen .form .checkLabel {
+  padding-left: 1rem;
 }
 
 .policy .title {
@@ -278,4 +314,3 @@ body, html {
 .policy .datePublic {
   color: grey;
 }
-/*# sourceMappingURL=style.css.map */
