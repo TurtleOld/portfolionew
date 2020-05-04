@@ -220,6 +220,11 @@ body, html {
 .contactsScreen .form {
   margin: 0 auto;
   max-width: 500px;
+  padding: 1rem;
+  border: 1px solid #006600;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 5px 8px #00CC33;
+          box-shadow: 0 0 5px 8px #00CC33;
 }
 
 .contactsScreen .form h5 {
