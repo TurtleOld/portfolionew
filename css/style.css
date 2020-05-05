@@ -1,4 +1,4 @@
-.aboutScreen .aboutTitle, .skillsScreen .skillsTitle, .worksScreen .worksTitle, .contactsScreen .contactsTitle {
+.aboutScreen .aboutTitle, .skillsScreen .skillsTitle, .wrapper-fourth .worksScreen .worksTitle, .contactsScreen .contactsTitle {
   margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,7 +9,7 @@
   font-family: Philosopher, sans-serif;
 }
 
-.skillsScreen .listSkills, .worksScreen .listWorks {
+.skillsScreen .listSkills {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,7 +175,139 @@ body, html {
   list-style: none;
   text-align: center;
   color: #ffffff;
-  background-color: #333;
+  background-color: #333333;
+}
+
+.skillsScreen .listSkills_item:nth-child(1), .skillsScreen .listSkills_item:nth-child(2), .skillsScreen .listSkills_item:nth-child(3) {
+  -webkit-animation-name: slideInDown;
+          animation-name: slideInDown;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.skillsScreen .listSkills_item:nth-child(4) {
+  -webkit-animation-name: slideInLeft;
+          animation-name: slideInLeft;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.skillsScreen .listSkills_item:nth-child(6) {
+  -webkit-animation-name: slideInRight;
+          animation-name: slideInRight;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.skillsScreen .listSkills_item:nth-child(7), .skillsScreen .listSkills_item:nth-child(8) {
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .skillsScreen .listSkills_item:hover {
@@ -201,40 +333,27 @@ body, html {
   background-color: #333;
 }
 
-.worksScreen {
+.wrapper-fourth .worksScreen {
   height: 100vh;
 }
 
-.worksScreen .worksTitle {
+.wrapper-fourth .worksScreen .worksTitle {
   color: #ffffff;
+  margin-bottom: 5rem;
 }
 
-.worksScreen .listWorks_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc((100% / 3) - 2rem);
-          flex: 1 1 calc((100% / 3) - 2rem);
-  list-style: none;
+.wrapper-fourth .worksScreen .slick-slider img {
+  padding: 2rem;
 }
 
-.worksScreen .listWorks_item > img {
-  max-width: 240px;
-  max-height: 240px;
-  border: 1px solid #000000;
+.wrapper-fourth .worksScreen .moreWorks {
+  text-align: center;
 }
 
-.worksScreen .listWorks_item > a {
-  padding-top: 0.5rem;
-  color: #228B22;
+.wrapper-fourth .worksScreen .moreWorks a {
+  padding: 0.5rem 0.7rem 0.7rem 0.7rem;
+  background-color: #ffffff;
+  border-radius: 20px;
   text-decoration: none;
 }
 

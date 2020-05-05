@@ -128,8 +128,53 @@ body, html
       list-style: none
       text-align: center
       color: #ffffff
-      background-color: #333
+      background-color:#333333
 
+      //animation
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+        animation-name: slideInDown
+        animation-duration: 8s
+        animation-fill-mode: both
+        @keyframes slideInDown
+          0%
+            transform: translateY(-100%)
+            visibility: visible
+          100%
+            transform: translateY(0)
+      &:nth-child(4)
+        animation-name: slideInLeft
+        animation-duration: 8s
+        animation-fill-mode: both
+        @keyframes slideInLeft
+          0%
+            transform: translateX(-100%)
+            visibility: visible
+          100%
+            transform: translateX(0)
+      &:nth-child(6)
+        animation-name: slideInRight
+        animation-duration: 8s
+        animation-fill-mode: both
+        @keyframes slideInRight
+          0%
+            transform: translateX(100%)
+            visibility: visible
+          100%
+            transform: translateX(0)
+      &:nth-child(7),
+      &:nth-child(8)
+        animation-name: slideInUp
+        animation-duration: 8s
+        animation-fill-mode: both
+        @keyframes slideInUp
+          0%
+            transform: translateY(100%)
+            visibility: visible
+          100%
+            transform: translateY(0)
+        
       &:hover
         box-shadow: 0 0 5px 8px $listColorShadow
         color: $listColorShadow
@@ -145,29 +190,23 @@ body, html
       
 .wrapper-fourth
   background-color: #333
-
-.worksScreen
-  height: 100vh
-  .worksTitle
-    @extend %titleScreen
-    color: #ffffff
-  .listWorks
-    @extend %listStyle
-    &_item
-      display: flex
-      align-items: center
-      flex-direction: column
-      flex: 1 1 calc((100% / 3) - 2rem)
-      list-style: none
-      
-      > img
-        max-width: 240px
-        max-height: 240px
-        border: 1px solid #000000
-      > a 
-        padding-top: 0.5rem
-        color: #228B22
+  .worksScreen
+    height: 100vh
+    .worksTitle
+      @extend %titleScreen
+      color: #ffffff
+      margin-bottom: 5rem
+    .slick-slider
+      img 
+        padding: 2rem
+    .moreWorks
+      text-align: center
+      a 
+        padding: 0.5rem 0.7rem 0.7rem 0.7rem
+        background-color: #ffffff
+        border-radius: 20px
         text-decoration: none
+
         
 
 .wrapper-contacts

@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
     <title>Frontend Developer Portfolio</title>
   </head>
@@ -141,24 +143,23 @@
         <!-- /.row -->
         <div class="row">
           <div class="col-lg-12">
-            <ul class="listWorks">
-              <li class="listWorks_item">
-                <img src="img/nerds.jpg" alt="Скриншот сайта Nёrds">
-                <a href="https://nerds.alex-turtle.name" target="_blank">Перейти на сайт</a>
-              </li>
-              <!-- /.listWorks_item -->
-              <li class="listWorks_item">
-                <img src="img/nerds.jpg" alt="Скриншот сайта Nёrds">
-                <a href="https://nerds.alex-turtle.name" target="_blank">Перейти на сайт</a>
-              </li>
-              <!-- /.listWorks_item -->
-              <li class="listWorks_item">
-                <img src="img/nerds.jpg" alt="Скриншот сайта Nёrds">
-                <a href="https://nerds.alex-turtle.name" target="_blank">Перейти на сайт</a>
-              </li>
-              <!-- /.listWorks_item -->
-            </ul>
-            <!-- /.listWorks -->
+            <div class="slick-slider">
+              <img src="img/nerds.jpg"/>
+              <img src="img/nerds.jpg"/>
+              <img src="img/nerds.jpg"/>
+              <img src="img/nerds.jpg"/>
+              <img src="img/nerds.jpg"/>
+            </div>
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="moreWorks">
+              <a href="http://new.alex-turtle.name/works.html" target="_blank">Посмотреть все работы</a>
+            </div>
+            <!-- /.moreWorks -->
           </div>
           <!-- /.col-lg-12 -->
         </div>
@@ -243,7 +244,8 @@
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script type="text/javascript">
       $("#form").submit(function (e) { // Устанавливаем событие отправки для формы с id=form
            e.preventDefault();
@@ -262,6 +264,7 @@
             });
         });
   </script>
+  <!-- button form -->
   <script type="text/javascript">
     $(document).ready(function(){
 
@@ -274,6 +277,17 @@
           })
       });
     })
+  </script>
+  <!-- slider -->
+  <script>
+    $(document).ready(function(){
+      $('.slick-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+      });
+    });
   </script>
   </body>
 </html>
