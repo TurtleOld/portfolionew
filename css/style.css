@@ -128,11 +128,16 @@ body, html {
 }
 
 .aboutScreen .aboutText {
-  margin-top: 25%;
-  margin-bottom: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.aboutScreen .aboutText p {
+.aboutScreen .aboutText .text {
   margin: 0 auto;
   width: 500px;
   height: auto;
@@ -445,4 +450,111 @@ body, html {
   text-decoration: none;
   border-radius: 50px;
   background-color: #FF4500;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mainScreen .list .listItem {
+    font-size: 1rem;
+  }
+  .myNameTitle h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainScreen .list {
+    margin-top: 2.5rem;
+  }
+  .mainScreen .list .listItem {
+    font-size: 1rem;
+  }
+  .skillsScreen .listSkills_item {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .skillsScreen .listSkills_item p {
+    font-size: .7rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .mainScreen .logo {
+    margin-left: 0;
+  }
+  .mainScreen .list {
+    margin-top: 2.5rem;
+  }
+  .mainScreen .list .listItem {
+    font-size: 1rem;
+  }
+  .skillsScreen .listSkills_item {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .skillsScreen .listSkills_item p {
+    font-size: .7rem;
+    padding: .1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .mainScreen .logo {
+    margin-left: 0;
+    width: 250px;
+  }
+  .mainScreen .list {
+    margin-top: 2.5rem;
+  }
+  .mainScreen .list .listItem {
+    font-size: 1rem;
+  }
+  .aboutScreen .aboutText .text {
+    width: 100%;
+  }
+  .skillsScreen .listSkills {
+    gap: 0;
+    padding: 0;
+  }
+  .skillsScreen .listSkills_item {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .skillsScreen .listSkills_item h5 {
+    font-size: 1rem;
+  }
+  .skillsScreen .listSkills_item p {
+    font-size: .6rem;
+    padding: .1rem;
+  }
+  .slick-slider .slick-prev {
+    left: -1px;
+  }
+  .slick-slider .slick-next {
+    right: -1px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .mainScreen .logo {
+    margin-left: 0;
+    width: 250px;
+  }
+  .mainScreen .list {
+    margin-top: 2.5rem;
+  }
+  .mainScreen .list .listItem {
+    font-size: 1rem;
+  }
 }

@@ -27,6 +27,7 @@ $mtTitle: 5rem
 %wrapper-background
   background-size: cover
 
+
 // Main Content
   
 body, html
@@ -90,9 +91,10 @@ body, html
   .aboutTitle
     @extend %titleScreen
   .aboutText
-    margin-top: 25%
-    margin-bottom: 50%
-    p 
+    display: flex
+    margin-top: 15%
+    justify-content: center
+    .text 
       margin: 0 auto
       width: 500px
       height: auto
@@ -123,6 +125,7 @@ body, html
     color: #ffffff
   .listSkills
     @extend %listStyle
+    
     &_item
       max-width: 370px
       flex: 1 1 calc((100% / 3) - 2rem)
@@ -278,3 +281,14 @@ body, html
     text-decoration: none
     border-radius: 50px
     background-color: $textColor
+
+
+
+
+// mobile style
+
+@import large
+@import medium
+@import small
+@import extraSmall
+@import extraSmall449
