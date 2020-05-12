@@ -2,8 +2,19 @@
   .mainScreen
     .logo
       margin-left: 0
-      width: 250px
+      width: 100%
     .list
       margin-top: 2.5rem
       .listItem
         font-size: 1rem
+  .skillsScreen
+    height: auto
+    .listSkills
+      &_item
+        flex: 1 1 calc((100% / 1) - 2rem)
+        p 
+          font-size: .75rem
+  .aboutScreen
+    .aboutText
+      a 
+        margin-left: 20%

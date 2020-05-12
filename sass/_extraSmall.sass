@@ -12,10 +12,13 @@
       .text
         width: 100%
   .skillsScreen
+    height: auto
+    padding-bottom: 5rem
     .listSkills
       gap: 0
       padding: 0
       &_item
+        flex: 1 1 calc((100% / 2) - 2rem)
         animation: none !important 
         transition: none !important
         transform: none !important
@@ -23,7 +26,7 @@
           font-size: 1rem 
 
         p 
-          font-size: .6rem
+          font-size: .8rem
           padding: .1rem
   .slick-slider
     .slick-prev
