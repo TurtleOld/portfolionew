@@ -247,11 +247,13 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <input type="submit" id="submit" class="btn btn-primary" value="Отправить сообщение">
+                      
                     </div>
                   </div>
                 </div>
               </div>
               <!-- .form-group -->
+              <input name="surname" hidden>
             </form>
             <!-- /.form -->
           </div>
@@ -273,10 +275,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script>
-      $("#form").submit(function (e) { // Устанавливаем событие отправки для формы с id=form
-           e.preventDefault();
-            var form_data = $(this).serialize(); // Собираем все данные из формы
-            $.ajax({
+      $("#form").submit(function(e){ // Устанавливаем событие отправки для формы
+        e.preventDefault();
+        var form_data = $(this).serialize(); // Собираем все данные из формы
+        grecaptcha.ready(function() {
+        grecaptcha.execute('6LdnA6MZAAAAAKM_RaXbx7_Wt4Rb3-3s1DjJDPQ5', {
+          action: 'form'
+        })
+        .then(function(token){
+          $.ajax({
                 type: "POST", // Метод отправки
                 url: "post.php", // Путь до php файла отправителя
                 data: form_data,
@@ -287,8 +294,10 @@
                     $('#email').val('');
                     $('#text').val('');
                 }
-            });
+          });
         });
+      });
+      });
   </script>
   <!-- button form -->
   <script>
@@ -304,6 +313,19 @@
       });
     })
   </script>
+  <script>
+    let $form = document.getElementById('form');
+    let $button = document.getElementById('submit');
+
+    $button.addEventListener('click', function(){
+      if ($form.checkValidity()){
+        $form.submit();
+      }else{
+        alert("Ваше сообщение не отправлено. Заполните все поля!")
+      }
+    })
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdnA6MZAAAAAKM_RaXbx7_Wt4Rb3-3s1DjJDPQ5"></script>
   <!-- slider -->
   <script>
     $(document).ready(function(){
