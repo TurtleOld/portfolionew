@@ -246,7 +246,7 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-12">
-                      <input type="submit" id="submit" class="btn btn-primary" value="Отправить сообщение">
+                      <input type="submit" id="btnSubmit" class="btn btn-primary" value="Отправить сообщение">
                       
                     </div>
                   </div>
@@ -303,11 +303,11 @@
   <script>
     $(document).ready(function(){
 
-      $('#submit').prop('disabled', true);
+      $('#btnSubmit').prop('disabled', true);
 
       $('#check').change(function() {
 
-          $('#submit').prop('disabled', function(i, val) {
+          $('#btnSubmit').prop('disabled', function(i, val) {
             return !val;
           })
       });
@@ -315,7 +315,7 @@
   </script>
   <script>
     let $form = document.getElementById('form');
-    let $button = document.getElementById('submit');
+    let $button = document.getElementById('btnSubmit');
 
     $button.addEventListener('click', function(){
       if ($form.checkValidity()){
